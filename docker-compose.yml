@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  worker-boot:
+    container_name: thesis_worker_boot
+    build:
+      dockerfile: Dockerfile
+      context: ./workers/boot/
+    ports:
+      - 8082:8082
+    depends_on: 
+      - master
+  worker-webflux:
+    container_name: thesis_worker_webflux
+    build:
+      dockerfile: Dockerfile
+      context: ./workers/webflux/
+    ports:
+      - 8081:8081
+    depends_on: 
+      - master
+  master:
+    container_name: thesis_master
+    build:
+      dockerfile: Dockerfile
+      context: ./master/spring/
+    ports:
+      - 8080:8080
+
+networks:
+  local:
+    driver: bridge 
