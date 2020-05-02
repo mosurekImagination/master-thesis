@@ -9,4 +9,4 @@ RUN mvn install -Dmaven.test.skip=true
 FROM openjdk:14-jdk-alpine
 WORKDIR /app
 COPY --from=MAVEN_BUILD /build/target/ /app/
-ENTRYPOINT ["java", "-jar", "mosur-thesis-boot-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "mosur-thesis-worker-boot-0.0.1-SNAPSHOT.jar"]
