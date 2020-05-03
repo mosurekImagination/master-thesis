@@ -1,64 +1,125 @@
 version: "3.7"
 services:
-  worker-boot:
-    container_name: thesis_worker_boot
+  worker-boot-mysql:
+    container_name: thesis_worker_boot_mysql
+    restart: always
     build:
       dockerfile: Dockerfile
-      context: ./workers/boot/
+      context: ./workers/boot-mysql/
     ports:
-      - 8082:8082
-    depends_on: 
-      - master
+      - ${BOOT_PORT}:${BOOT_PORT}
     environment: 
       - MASTER_HOST=master
-      - MASTER_PORT=8080
-      - WORKER_HOST=worker-boot
-      - WORKER_PORT=8082
-  worker-webflux:
-    container_name: thesis_worker_webflux
+      - MASTER_PORT=${MASTER_PORT}
+      - WORKER_HOST=${BOOT_HOST}
+      - WORKER_PORT=${BOOT_PORT}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+  worker-webflux-mongodb:
+    container_name: thesis_worker_webflux_mongodb
+    restart: always
     build:
       dockerfile: Dockerfile
-      context: ./workers/webflux/
+      context: ./workers/webflux-mongodb/
     ports:
-      - 8081:8081
-    depends_on: 
-      - master
+      - ${WEBFLUX_MONGODB_PORT}:${WEBFLUX_MONGODB_PORT}
     environment: 
-      - MASTER_HOST=master
-      - MASTER_PORT=8080
-      - WORKER_HOST=worker-webflux
-      - WORKER_PORT=8081
+      - MASTER_HOST=${MASTER_HOST}
+      - MASTER_PORT=${MASTER_PORT}
+      - WORKER_HOST=${WEBFLUX_MONGODB_HOST}
+      - WORKER_PORT=${WEBFLUX_MONGODB_PORT}
+      - MONGODB_HOST=${MONGODB_HOST}
+      - MONGODB_PORT=${MONGODB_PORT}
+      - MONGO_DATABASE=${MONGO_DATABASE}
+      - MONGO_USERNAME=${MONGO_USERNAME}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+  worker-webflux-mysql:
+    container_name: thesis_worker_webflux_mysql
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./workers/webflux-mysql/
+    ports:
+      - ${WEBFLUX_MYSQL_PORT}:${WEBFLUX_MYSQL_PORT}
+    environment: 
+      - MASTER_HOST=${MASTER_HOST}
+      - MASTER_PORT=${MASTER_PORT}
+      - WORKER_HOST=${WEBFLUX_MYSQL_HOST}
+      - WORKER_PORT=${WEBFLUX_MYSQL_PORT}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
   master:
     container_name: thesis_master
+    restart: always
     build:
       dockerfile: Dockerfile
       context: ./master/spring/
     ports:
-      - 8080:8080
+      - ${MASTER_PORT}:${MASTER_PORT}
     environment: 
-      - MASTER_PORT=8080
+      - MASTER_PORT=${MASTER_PORT}
       - MASTER_HOST=localhost
   jmeter:
     container_name: thesis_jmeter
     build:
       dockerfile: Dockerfile
       context: ./master/jmeter/
+    # entrypoint: ["su"]
     volumes:
       - ./master/jmeter/test-results/:/jmeter/test-results/
-    # entrypoint: "su"
-    environment: 
-      - HOST_ADRESS=worker-webflux
-      - HOST_PORT=8081
+    environment:
+      - FIRST_WORKER_HOST=${WEBFLUX_MONGODB_HOST}
+      - FIRST_WORKER_PORT=${WEBFLUX_MONGODB_PORT}
+      - SECOND_WORKER_HOST=${BOOT_HOST}
+      - SECOND_WORKER_PORT=${BOOT_PORT}
+      - THIRD_WORKER_HOST=${WEBFLUX_MYSQL_HOST}
+      - THIRD_WORKER_PORT=${WEBFLUX_MYSQL_PORT}
   prometheus:
+    container_name: thesis_prometheus
     ports:
-    - "9090:9090"
+    - "${PROMETHEUS_PORT}:9090"
+    restart: always
     entrypoint: /bin/sh
-    command: "/etc/prometheus/init_prometheus.sh"
+    command: "/etc/prometheus/init_prometheus.sh" # has to be command, to
     build:
       dockerfile: Dockerfile
       context: ./master/prometheus/
     environment: 
-      - FIRST_WORKER_HOST=worker-webflux
-      - FIRST_WORKER_PORT=8081
-      - SECOND_WORKER_HOST=worker-boot
-      - SECOND_WORKER_PORT=8082
+      - WORKERS=['${WEBFLUX_MONGODB_HOST}:${WEBFLUX_MONGODB_PORT}','${BOOT_HOST}:${BOOT_PORT}', '${WEBFLUX_MYSQL_HOST}:${WEBFLUX_MYSQL_PORT}']
+  mysql:
+    container_name: thesis_mysql
+    build: 
+      dockerfile: Dockerfile
+      context: ./databases/mysql
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+    ports:
+      - ${MYSQL_PORT}:3306
+    restart: always
+    # volumes:
+    #   - ./databases/mysql/volume:/var/lib/mysql
+    cap_add:
+      - SYS_NICE
+  mongodb:
+    container_name: thesis_mongodb
+    build: 
+      dockerfile: Dockerfile
+      context: ./databases/mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
+    ports:
+      - ${MONGODB_PORT}:27017
+    restart: always
+    # volumes:
+    #   - ./databases/mongodb/volume:/data/db
+    cap_add:
+      - SYS_NICE

@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 WORKDIR /jmeter/
+RUN ["apk", "add", "tzdata"]
 COPY /jmeter-5.2.1/ /jmeter/
 COPY /test-scenarios/ /jmeter/test-scenarios/
 COPY entrypoint.sh /jmeter/

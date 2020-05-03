@@ -9,26 +9,37 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>net.mosur</groupId>
-    <artifactId>mosur-thesis-master-node</artifactId>
+    <artifactId>mosur-thesis-worker-webflux-mongodb</artifactId>
     <version>1.0</version>
-    <name>mosur-thesis-master-node</name>
-    <description>Application for Master thesis - Master node</description>
+    <name>mosur-thesis-worker-webflux-mongodb</name>
+    <description>Worker for Master thesis - reactive way</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
             <version>2.2.6.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-            <version>2.2.2</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>2.2.6.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

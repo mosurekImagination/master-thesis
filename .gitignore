@@ -1,2 +1,8 @@
 /master/jmeter/jmeter-5.2.1/*
 /master/jmeter/test-results/*
+.idea/
+ServerAgent/*
+lib/*
+/workers/boot-mysql/lib/
+/workers/webflux-mongodb/lib/
+/workers/webflux-mysql/lib/
