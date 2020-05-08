@@ -9,6 +9,5 @@ import reactor.core.publisher.Mono;
 public interface EntityRepository extends ReactiveMongoRepository<ThesisEntity, String> {
 
     Flux<ThesisEntity> findByNumber(Long name);
-
     Mono<ThesisEntity> findFirstByNumber(Long name);
 }

@@ -6,3 +6,7 @@
 # /workers/boot-mysql/lib/
 # /workers/webflux-mongodb/lib/
 # /workers/webflux-mysql/lib/
+master/jmeter/jmeter-5.2.1/backups/
+master/jmeter/jmeter-5.2.1/*
+master/jmeter/jmeter-5.2.1/backups/*
+master/jmeter/jmeter-5.2.1/bin/jmeter.log

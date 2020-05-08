@@ -28,6 +28,8 @@ public class DatabaseInit implements ApplicationListener<ApplicationReadyEvent> 
         ConnectionFactory connectionFactory = ConnectionFactories.get(options);
         DatabaseClient client = DatabaseClient.create(connectionFactory);
         client.execute(
+            "DROP TABLE IF EXISTS `thesis_entity`").then().block();
+        client.execute(
             "CREATE TABLE IF NOT EXISTS `thesis_entity` (\n" +
                     "  `id` int NOT NULL AUTO_INCREMENT,\n" +
                     "  `name` varchar(255) DEFAULT NULL,\n" +

@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class ThesisEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue
     Long id;
     Long number;
     String name;

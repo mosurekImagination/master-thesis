@@ -88,37 +88,20 @@
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="-- WARM UP --" enabled="true">
-        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="Warm up" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="TargetLevel">50</stringProp>
-        <stringProp name="RampUp">10</stringProp>
-        <stringProp name="Steps">30</stringProp>
-        <stringProp name="Hold">20</stringProp>
-        <stringProp name="LogFilename"></stringProp>
-        <stringProp name="Iterations"></stringProp>
-        <stringProp name="Unit">S</stringProp>
-      </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">10</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </SetupThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-ENTITY" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/find-one/${randomElementId}</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="FIBONACCI" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -1315,7 +1298,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">${__P(summaryReportPath,)}/${read-entity}/${secondGroup}/summary.csv</stringProp>
+          <stringProp name="filename">${__P(summaryReportPath,)}/${secondGroup}/summary.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -2173,23 +2156,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="1. SPIKE - read-entity" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
@@ -2202,25 +2227,6 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
       </kg.apc.jmeter.threads.UltimateThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-ENTITY" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain"></stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol"></stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/find-one/${randomElementId}</stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
         <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -2295,6 +2301,25 @@
           <stringProp name="filename">${__P(aggregateReportPath,)}/${read-entity}/${thirdGroup}/aggregate.csv</stringProp>
         </ResultCollector>
         <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-ENTITY" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/find-one/${randomElementId}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -2339,23 +2364,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="2. SPIKE - modify-entity" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
@@ -2505,23 +2572,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="3. SPIKE - save-entity" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
@@ -2671,23 +2780,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="4. SPIKE - read-text" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
@@ -2837,23 +2988,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="5. SPIKE - read-file" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
@@ -3003,23 +3196,65 @@
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="6. SPIKE - fibonacci" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="54920806">
-            <stringProp name="1567">10</stringProp>
+          <collectionProp name="-1826818721">
+            <stringProp name="1507423">1000</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="-1260416796">
-            <stringProp name="53">5</stringProp>
+          <collectionProp name="1660146867">
+            <stringProp name="48625">100</stringProp>
             <stringProp name="1722">60</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1598">20</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
-          <collectionProp name="863875441">
-            <stringProp name="1598">20</stringProp>
+          <collectionProp name="739424611">
+            <stringProp name="1537214">2000</stringProp>
             <stringProp name="1815">90</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="266700646">
+            <stringProp name="49586">200</stringProp>
+            <stringProp name="48780">150</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-220051034">
+            <stringProp name="1567005">3000</stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="821044082">
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="49710">240</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="-121322252">
+            <stringProp name="1596796">4000</stringProp>
+            <stringProp name="49803">270</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1691">50</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="1804472423">
+            <stringProp name="51508">400</stringProp>
+            <stringProp name="50640">330</stringProp>
+            <stringProp name="53">5</stringProp>
+            <stringProp name="1598">20</stringProp>
+            <stringProp name="53">5</stringProp>
+          </collectionProp>
+          <collectionProp name="588250859">
+            <stringProp name="1626587">5000</stringProp>
+            <stringProp name="50733">360</stringProp>
             <stringProp name="53">5</stringProp>
             <stringProp name="1691">50</stringProp>
             <stringProp name="53">5</stringProp>
