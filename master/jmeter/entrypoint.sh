@@ -26,10 +26,10 @@ sleep 3
 echo "3sec remaining"
 sleep 3
 
-# mkdir $tempResultsFolder/
-# echo "### STARTING 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
-# ./bin/jmeter -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $tempResultsFolder/results.log -e -o $tempResultsFolder/report/ -JperfmonReportPath=$tempResultsFolder -JaggregateReportPath=$tempResultsFolder -JsummaryReportPath=$tempResultsFolder -JgraphReportPath=$tempResultsFolder -JtableReportPath=$tempResultsFolder
-# mv $tempResultsFolder/ $resultsFolder/2-$SECOND_WORKER_HOST/
+mkdir $tempResultsFolder/
+echo "### STARTING 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
+./bin/jmeter -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $tempResultsFolder/results.log -e -o $tempResultsFolder/report/ -JperfmonReportPath=$tempResultsFolder -JaggregateReportPath=$tempResultsFolder -JsummaryReportPath=$tempResultsFolder -JgraphReportPath=$tempResultsFolder -JtableReportPath=$tempResultsFolder
+mv $tempResultsFolder/ $resultsFolder/2-$SECOND_WORKER_HOST/
 
 
 # echo "WAITING 100sec to systems up"
@@ -37,10 +37,10 @@ sleep 3
 # echo "3sec remaining"
 # sleep 3
 
-# mkdir $tempResultsFolder/
-# echo "### STARTING 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
-# ./bin/jmeter -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $tempResultsFolder/results.log -e -o $tempResultsFolder/report/ -JperfmonReportPath=$tempResultsFolder -JaggregateReportPath=$tempResultsFolder -JsummaryReportPath=$tempResultsFolder -JgraphReportPath=$tempResultsFolder -JtableReportPath=$tempResultsFolder
-# mv $tempResultsFolder/ $resultsFolder/3-$THIRD_WORKER_HOST/
+mkdir $tempResultsFolder/
+echo "### STARTING 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
+./bin/jmeter -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $tempResultsFolder/results.log -e -o $tempResultsFolder/report/ -JperfmonReportPath=$tempResultsFolder -JaggregateReportPath=$tempResultsFolder -JsummaryReportPath=$tempResultsFolder -JgraphReportPath=$tempResultsFolder -JtableReportPath=$tempResultsFolder
+mv $tempResultsFolder/ $resultsFolder/3-$THIRD_WORKER_HOST/
 
 echo "### LOAD TESTING FINISHED ###"
 

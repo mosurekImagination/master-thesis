@@ -1,23 +1,24 @@
 version: "3.7"
 services:
-  # worker-boot-mysql:
-  #   container_name: thesis_worker_boot_mysql
-  #   restart: always
-  #   build:
-  #     dockerfile: Dockerfile
-  #     context: ./workers/boot-mysql/
-  #   ports:
-  #     - ${BOOT_PORT}:${BOOT_PORT}
-  #   environment: 
-  #     - MASTER_HOST=master
-  #     - MASTER_PORT=${MASTER_PORT}
-  #     - WORKER_HOST=${BOOT_HOST}
-  #     - WORKER_PORT=${BOOT_PORT}
-  #     - MYSQL_HOST=${MYSQL_HOST}
-  #     - MYSQL_PORT=${MYSQL_PORT}
-  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
-  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  #     - MYSQL_USER=${MYSQL_USER}
+  worker-boot-mysql:
+    container_name: thesis_worker_boot_mysql
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./workers/boot-mysql/
+    ports:
+      - ${BOOT_PORT}:${BOOT_PORT}
+      #- 4444:4444 # Jmeter Permon debugging
+    environment: 
+      - MASTER_HOST=master
+      - MASTER_PORT=${MASTER_PORT}
+      - WORKER_HOST=${BOOT_HOST}
+      - WORKER_PORT=${BOOT_PORT}
+      - MYSQL_HOST=${MYSQL_HOST}
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
   worker-webflux-mongodb:
     container_name: thesis_worker_webflux_mongodb
     restart: always
@@ -26,7 +27,7 @@ services:
       context: ./workers/webflux-mongodb/
     ports:
       - ${WEBFLUX_MONGODB_PORT}:${WEBFLUX_MONGODB_PORT}
-      - 4444:4444  # Jmeter Permon debugging
+      #- 4444:4444  # Jmeter Permon debugging
     environment: 
       - MASTER_HOST=${MASTER_HOST}
       - MASTER_PORT=${MASTER_PORT}
@@ -37,24 +38,25 @@ services:
       - MONGO_DATABASE=${MONGO_DATABASE}
       - MONGO_USERNAME=${MONGO_USERNAME}
       - MONGO_PASSWORD=${MONGO_PASSWORD}
-  # worker-webflux-mysql:
-  #   container_name: thesis_worker_webflux_mysql
-  #   restart: always
-  #   build:
-  #     dockerfile: Dockerfile
-  #     context: ./workers/webflux-mysql/
-  #   ports:
-  #     - ${WEBFLUX_MYSQL_PORT}:${WEBFLUX_MYSQL_PORT}
-  #   environment: 
-  #     - MASTER_HOST=${MASTER_HOST}
-  #     - MASTER_PORT=${MASTER_PORT}
-  #     - WORKER_HOST=${WEBFLUX_MYSQL_HOST}
-  #     - WORKER_PORT=${WEBFLUX_MYSQL_PORT}
-  #     - MYSQL_HOST=webflux-mysql
-  #     - MYSQL_PORT=${MYSQL_PORT}
-  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
-  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-  #     - MYSQL_USER=${MYSQL_USER}
+  worker-webflux-mysql:
+    container_name: thesis_worker_webflux_mysql
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./workers/webflux-mysql/
+    ports:
+      - ${WEBFLUX_MYSQL_PORT}:${WEBFLUX_MYSQL_PORT}
+      #- 4444:4444  # Jmeter Permon debugging
+    environment: 
+      - MASTER_HOST=${MASTER_HOST}
+      - MASTER_PORT=${MASTER_PORT}
+      - WORKER_HOST=${WEBFLUX_MYSQL_HOST}
+      - WORKER_PORT=${WEBFLUX_MYSQL_PORT}
+      - MYSQL_HOST=webflux-mysql
+      - MYSQL_PORT=${MYSQL_PORT}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
   master:
     container_name: thesis_master
     restart: always
@@ -93,22 +95,22 @@ services:
       context: ./master/prometheus/
     environment: 
       - WORKERS=['${WEBFLUX_MONGODB_HOST}:${WEBFLUX_MONGODB_PORT}','${BOOT_HOST}:${BOOT_PORT}', '${WEBFLUX_MYSQL_HOST}:${WEBFLUX_MYSQL_PORT}']
-  # mysql:
-  #   container_name: thesis_mysql
-  #   build: 
-  #     dockerfile: Dockerfile
-  #     context: ./databases/mysql
-  #   environment:
-  #     - MYSQL_DATABASE=${MYSQL_DATABASE}
-  #     - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
-  #   ports:
-  #     - ${MYSQL_PORT}:3306
-  #   restart: always
-  #   volumes:
-  #     - mysqlvolume:/var/lib/mysql
-  #   #   - ./databases/mysql/volume:/var/lib/mysql
-  #   cap_add:
-  #     - SYS_NICE
+  mysql:
+    container_name: thesis_mysql
+    build: 
+      dockerfile: Dockerfile
+      context: ./databases/mysql
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+    #ports:
+    #  - ${MYSQL_PORT}:3306
+    restart: always
+    volumes:
+      - mysqlvolume:/var/lib/mysql
+    #   - ./databases/mysql/volume:/var/lib/mysql
+    cap_add:
+      - SYS_NICE
   webflux-mysql:
     container_name: thesis_webflux_mysql
     build: 
@@ -118,6 +120,8 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
     restart: always
+    #ports:
+    #  - 3306:3306
     volumes:
       - webfluxmysqlvolume:/var/lib/mysql
     #   - ./databases/mysql/volume:/var/lib/mysql

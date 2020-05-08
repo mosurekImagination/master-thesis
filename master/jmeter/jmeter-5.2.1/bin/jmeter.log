@@ -1,49 +1,49 @@
-2020-05-04 15:47:29,971 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2020-05-04 15:47:29,994 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2020-05-04 15:47:29,999 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: Version 5.2.1
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: java.version=1.8.0_201
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: os.name=Windows 10
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: os.arch=amd64
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: os.version=10.0
-2020-05-04 15:47:30,001 INFO o.a.j.JMeter: file.encoding=Cp1250
-2020-05-04 15:47:30,002 INFO o.a.j.JMeter: java.awt.headless=null
-2020-05-04 15:47:30,002 INFO o.a.j.JMeter: Max memory     =1073741824
-2020-05-04 15:47:30,002 INFO o.a.j.JMeter: Available Processors =8
-2020-05-04 15:47:30,007 INFO o.a.j.JMeter: Default Locale=English (EN)
-2020-05-04 15:47:30,008 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2020-05-04 15:47:30,008 INFO o.a.j.JMeter: JMeterHome=D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1
-2020-05-04 15:47:30,008 INFO o.a.j.JMeter: user.dir  =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
-2020-05-04 15:47:30,008 INFO o.a.j.JMeter: PWD       =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
-2020-05-04 15:47:30,011 INFO o.a.j.JMeter: IP: 172.26.109.17 Name: DESKTOP-QVOVGC2 FullName: DESKTOP-QVOVGC2.mshome.net
-2020-05-04 15:47:30,893 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2020-05-04 15:47:30,931 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2020-05-04 15:47:30,931 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2020-05-04 15:47:31,024 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2020-05-04 15:47:33,326 INFO o.j.r.JARSourceHTTP: Found cached repo
-2020-05-04 15:47:33,536 INFO o.j.r.PluginManager: Plugins Status: [jpgc-casutg=2.9, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1]
-2020-05-04 15:47:34,050 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-04 15:47:34,051 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-04 15:47:34,051 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-04 15:47:34,051 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-04 15:47:34,051 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2020-05-04 15:47:34,051 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2020-05-04 15:47:34,525 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2020-05-04 15:47:34,525 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin\proxyserver.jks
-2020-05-04 15:47:34,698 INFO o.a.j.s.FileServer: Default base='D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin'
-2020-05-04 15:47:35,932 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2020-05-04 15:47:35,932 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2020-05-04 15:47:35,932 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2020-05-04 15:47:35,932 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2020-05-04 15:47:40,515 INFO o.a.j.g.a.Load: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
-2020-05-04 15:47:40,515 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
-2020-05-04 15:47:40,659 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2020-05-04 15:47:40,668 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2020-05-04 15:47:40,669 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2020-05-04 15:47:40,672 INFO o.a.j.s.SaveService: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
-2020-05-04 15:47:40,791 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
-2020-05-04 15:47:40,840 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2020-05-04 15:47:40,840 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2020-05-04 15:47:41,208 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
+2020-05-08 22:25:34,554 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-05-08 22:25:34,568 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2020-05-08 22:25:34,569 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: Version 5.2.1
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: java.version=1.8.0_201
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.name=Windows 10
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.arch=amd64
+2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.version=10.0
+2020-05-08 22:25:34,571 INFO o.a.j.JMeter: file.encoding=Cp1250
+2020-05-08 22:25:34,571 INFO o.a.j.JMeter: java.awt.headless=null
+2020-05-08 22:25:34,571 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-05-08 22:25:34,571 INFO o.a.j.JMeter: Available Processors =8
+2020-05-08 22:25:34,577 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-05-08 22:25:34,577 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-05-08 22:25:34,577 INFO o.a.j.JMeter: JMeterHome=D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1
+2020-05-08 22:25:34,577 INFO o.a.j.JMeter: user.dir  =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
+2020-05-08 22:25:34,578 INFO o.a.j.JMeter: PWD       =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
+2020-05-08 22:25:34,589 INFO o.a.j.JMeter: IP: 172.26.109.17 Name: DESKTOP-QVOVGC2 FullName: DESKTOP-QVOVGC2.mshome.net
+2020-05-08 22:25:34,838 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2020-05-08 22:25:34,870 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2020-05-08 22:25:34,870 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2020-05-08 22:25:34,941 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2020-05-08 22:25:37,340 INFO o.j.r.JARSourceHTTP: Found cached repo
+2020-05-08 22:25:37,538 INFO o.j.r.PluginManager: Plugins Status: [jpgc-casutg=2.9, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1]
+2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-05-08 22:25:38,560 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2020-05-08 22:25:38,560 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin\proxyserver.jks
+2020-05-08 22:25:38,755 INFO o.a.j.s.FileServer: Default base='D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin'
+2020-05-08 22:25:39,988 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-05-08 22:25:43,467 INFO o.a.j.g.a.Load: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
+2020-05-08 22:25:43,467 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
+2020-05-08 22:25:43,615 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-05-08 22:25:43,618 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-05-08 22:25:43,620 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-05-08 22:25:43,623 INFO o.a.j.s.SaveService: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
+2020-05-08 22:25:43,840 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2020-05-08 22:25:44,021 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-05-08 22:25:44,021 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-05-08 22:25:44,688 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
