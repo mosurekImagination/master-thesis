@@ -60,7 +60,7 @@ public class ThesisService {
     @SneakyThrows
     public String getFile() {
         return Files.newBufferedReader(
-                Paths.get("app/file.txt"))
+                Paths.get("/app/file.txt"))
                 .lines()
                 .map(String::toUpperCase)
                 .collect(Collectors.joining());

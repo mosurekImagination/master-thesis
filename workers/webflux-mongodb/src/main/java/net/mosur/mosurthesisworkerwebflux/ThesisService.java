@@ -3,14 +3,12 @@ package net.mosur.mosurthesisworkerwebflux;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import net.mosur.mosurthesisworkerwebflux.entity.ThesisEntity;
 import net.mosur.mosurthesisworkerwebflux.entity.EntityRepository;
+import net.mosur.mosurthesisworkerwebflux.entity.ThesisEntity;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.io.File;
-import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.Random;
