@@ -177,11 +177,11 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="1. const-READ-ENTITY" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="1. const-READ-ENTITY" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -361,11 +361,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="2. const-MODIFY-ENTITY" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="2. const-MODIFY-ENTITY" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -508,11 +508,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="3. const-SAVE-ENTITY" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="3. const-SAVE-ENTITY" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -655,11 +655,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="4. const-READ-TEXT" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="4. const-READ-TEXT" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -802,11 +802,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="5. CONST - read-file" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="5. CONST - read-file" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -949,11 +949,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="6. const-FIB" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="6. const-FIB" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -1096,7 +1096,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
@@ -2129,11 +2129,11 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Init Database" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Init Database" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -2167,7 +2167,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----------------------------------------" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
@@ -2326,11 +2326,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="2. SPIKE - modify-entity" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="2. SPIKE - modify-entity" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="54920806">
             <stringProp name="1567">10</stringProp>
@@ -2485,11 +2485,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="3. SPIKE - save-entity" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="3. SPIKE - save-entity" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="54920806">
             <stringProp name="1567">10</stringProp>
@@ -2644,11 +2644,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="4. SPIKE - read-text" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="4. SPIKE - read-text" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="54920806">
             <stringProp name="1567">10</stringProp>
@@ -2803,11 +2803,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="5. SPIKE - read-file" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="5. SPIKE - read-file" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="54920806">
             <stringProp name="1567">10</stringProp>
@@ -2962,11 +2962,11 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="true">
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="----" enabled="false">
         <stringProp name="ConstantTimer.delay">${defaultDelay}</stringProp>
       </ConstantTimer>
       <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="6. SPIKE - fibonacci" enabled="true">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="6. SPIKE - fibonacci" enabled="false">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="54920806">
             <stringProp name="1567">10</stringProp>
@@ -3328,7 +3328,7 @@
           </elementProp>
           <elementProp name="defaultDelay" elementType="Argument">
             <stringProp name="Argument.name">defaultDelay</stringProp>
-            <stringProp name="Argument.value">${__P(defaultDelay,2000)}</stringProp>
+            <stringProp name="Argument.value">${__P(defaultDelay,10000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -3427,7 +3427,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="targetConcurrency" elementType="Argument">
             <stringProp name="Argument.name">targetConcurrency</stringProp>
-            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.value">6000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampUpTime" elementType="Argument">
@@ -3447,12 +3447,12 @@
           </elementProp>
           <elementProp name="incremental-rampUpTime" elementType="Argument">
             <stringProp name="Argument.name">incremental-rampUpTime</stringProp>
-            <stringProp name="Argument.value">360</stringProp>
+            <stringProp name="Argument.value">420</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="incremental-rampUpSteps" elementType="Argument">
             <stringProp name="Argument.name">incremental-rampUpSteps</stringProp>
-            <stringProp name="Argument.value">360</stringProp>
+            <stringProp name="Argument.value">420</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="incremental-holdTargetRate" elementType="Argument">
