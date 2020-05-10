@@ -1,12 +1,16 @@
+echo "MASTER_HOST: $1"
 MASTER_HOST=$1
 MASTER_PORT=8080
 
+echo "WEBFLUX_MONGODB_HOST: $3"
 WEBFLUX_MONGODB_HOST=$2
 WEBFLUX_MONGODB_PORT=8081
 
+echo "BOOT_MYSQL_HOST: $4"
 BOOT_MYSQL_HOST=$3
 BOOT_PORT=8082
 
+echo "WEBFLUX_MYSQL_HOST: $4"
 WEBFLUX_MYSQL_HOST=$4
 WEBFLUX_MYSQL_PORT=8083
 
@@ -16,6 +20,7 @@ hosts=($MASTER_HOST $WEBFLUX_MONGODB_HOST $BOOT_MYSQL_HOST $WEBFLUX_MYSQL_HOST)
 echo "adding fingerprints"
 for host in ${hosts[*]}
 do
+echo "host: $host"
 ssh-keyscan -H $host >> ~/.ssh/known_hosts
 done
 
@@ -52,7 +57,7 @@ done
 echo "running master"
 ssh -i "master-thesis.pem" ec2-user@$MASTER_HOST <<-ENDSSH
 cd master-thesis
-sudo WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_HOST BOOT_MYSQL_HOST=$BOOT_MYSQL_HOST WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_HOST docker-compose up master prometheus
+sudo WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_HOST BOOT_MYSQL_HOST=$BOOT_MYSQL_HOST WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_HOST docker-compose up -d master prometheus
 ENDSSH
 
 # run worker-boot-mysql

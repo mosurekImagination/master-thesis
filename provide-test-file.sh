@@ -1,1 +1,0 @@
-find ./workers/ -mindepth 1 -maxdepth 1 -type d -exec cp file.txt {} \;
