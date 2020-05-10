@@ -147,7 +147,7 @@ rem http://docs.oracle.com/javase/8/docs/technotes/tools/unix/java.html
 if not defined HEAP (
     rem See the unix startup file for the rationale of the following parameters,
     rem including some tuning recommendations
-    set HEAP=-Xms1g -Xmx1g -XX:MaxMetaspaceSize=256m
+    set HEAP=-Xms4g -Xmx4g -XX:MaxMetaspaceSize=512m
 )
 
 rem Uncomment this to generate GC verbose file with Java prior to 9 

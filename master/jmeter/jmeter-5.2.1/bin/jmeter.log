@@ -1,49 +1,547 @@
-2020-05-08 22:25:34,554 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2020-05-08 22:25:34,568 INFO o.a.j.JMeter: Loading user properties from: user.properties
-2020-05-08 22:25:34,569 INFO o.a.j.JMeter: Loading system properties from: system.properties
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: Version 5.2.1
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: java.version=1.8.0_201
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.name=Windows 10
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.arch=amd64
-2020-05-08 22:25:34,570 INFO o.a.j.JMeter: os.version=10.0
-2020-05-08 22:25:34,571 INFO o.a.j.JMeter: file.encoding=Cp1250
-2020-05-08 22:25:34,571 INFO o.a.j.JMeter: java.awt.headless=null
-2020-05-08 22:25:34,571 INFO o.a.j.JMeter: Max memory     =1073741824
-2020-05-08 22:25:34,571 INFO o.a.j.JMeter: Available Processors =8
-2020-05-08 22:25:34,577 INFO o.a.j.JMeter: Default Locale=English (EN)
-2020-05-08 22:25:34,577 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2020-05-08 22:25:34,577 INFO o.a.j.JMeter: JMeterHome=D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1
-2020-05-08 22:25:34,577 INFO o.a.j.JMeter: user.dir  =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
-2020-05-08 22:25:34,578 INFO o.a.j.JMeter: PWD       =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
-2020-05-08 22:25:34,589 INFO o.a.j.JMeter: IP: 172.26.109.17 Name: DESKTOP-QVOVGC2 FullName: DESKTOP-QVOVGC2.mshome.net
-2020-05-08 22:25:34,838 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
-2020-05-08 22:25:34,870 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
-2020-05-08 22:25:34,870 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
-2020-05-08 22:25:34,941 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
-2020-05-08 22:25:37,340 INFO o.j.r.JARSourceHTTP: Found cached repo
-2020-05-08 22:25:37,538 INFO o.j.r.PluginManager: Plugins Status: [jpgc-casutg=2.9, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1]
-2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-08 22:25:38,163 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2020-05-08 22:25:38,164 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2020-05-08 22:25:38,560 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
-2020-05-08 22:25:38,560 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin\proxyserver.jks
-2020-05-08 22:25:38,755 INFO o.a.j.s.FileServer: Default base='D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin'
-2020-05-08 22:25:39,988 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
-2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2020-05-08 22:25:39,989 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2020-05-08 22:25:43,467 INFO o.a.j.g.a.Load: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
-2020-05-08 22:25:43,467 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
-2020-05-08 22:25:43,615 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2020-05-08 22:25:43,618 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2020-05-08 22:25:43,620 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2020-05-08 22:25:43,623 INFO o.a.j.s.SaveService: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
-2020-05-08 22:25:43,840 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
-2020-05-08 22:25:44,021 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2020-05-08 22:25:44,021 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2020-05-08 22:25:44,688 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
+2020-05-10 14:29:30,163 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-05-10 14:29:30,176 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2020-05-10 14:29:30,176 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: Version 5.2.1
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: java.version=1.8.0_201
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: os.name=Windows 10
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: os.arch=amd64
+2020-05-10 14:29:30,178 INFO o.a.j.JMeter: os.version=10.0
+2020-05-10 14:29:30,179 INFO o.a.j.JMeter: file.encoding=Cp1250
+2020-05-10 14:29:30,179 INFO o.a.j.JMeter: java.awt.headless=null
+2020-05-10 14:29:30,179 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-05-10 14:29:30,179 INFO o.a.j.JMeter: Available Processors =8
+2020-05-10 14:29:30,183 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-05-10 14:29:30,183 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-05-10 14:29:30,183 INFO o.a.j.JMeter: JMeterHome=D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1
+2020-05-10 14:29:30,183 INFO o.a.j.JMeter: user.dir  =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
+2020-05-10 14:29:30,184 INFO o.a.j.JMeter: PWD       =D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin
+2020-05-10 14:29:30,186 INFO o.a.j.JMeter: IP: 172.26.109.17 Name: DESKTOP-QVOVGC2 FullName: DESKTOP-QVOVGC2.mshome.net
+2020-05-10 14:29:30,996 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2020-05-10 14:29:31,010 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2020-05-10 14:29:31,010 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2020-05-10 14:29:31,061 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2020-05-10 14:29:32,263 INFO o.a.j.JMeter: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
+2020-05-10 14:29:32,265 INFO o.a.j.s.FileServer: Default base='D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin'
+2020-05-10 14:29:32,266 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
+2020-05-10 14:29:32,441 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-05-10 14:29:32,446 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-05-10 14:29:32,449 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-05-10 14:29:32,453 INFO o.a.j.s.SaveService: Loading file: D:\X semestr\magisterka\dev\master\jmeter\test-scenarios\simple.jmx
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-05-10 14:29:32,671 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-05-10 14:29:32,708 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2020-05-10 14:29:32,859 INFO o.a.j.s.FileServer: Set new base='D:\X semestr\magisterka\dev\master\jmeter\test-scenarios'
+2020-05-10 14:29:33,031 INFO o.j.r.JARSourceHTTP: Found cached repo
+2020-05-10 14:29:33,130 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-05-10 14:29:33,131 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-05-10 14:29:33,240 INFO o.j.r.PluginManager: Plugins Status: [jpgc-casutg=2.9, jpgc-perfmon=2.1, jpgc-plugins-manager=1.4, jmeter-core=5.2.1, jmeter-ftp=5.2.1, jmeter-http=5.2.1, jmeter-jdbc=5.2.1, jmeter-jms=5.2.1, jmeter-junit=5.2.1, jmeter-java=5.2.1, jmeter-ldap=5.2.1, jmeter-mail=5.2.1, jmeter-mongodb=5.2.1, jmeter-native=5.2.1, jmeter-tcp=5.2.1, jmeter-components=5.2.1]
+2020-05-10 14:29:34,372 WARN o.a.j.g.t.JMeterTreeNode: getIcon(): Can't obtain GUI class from class org.apache.jmeter.config.RandomVariableConfig
+2020-05-10 14:29:35,674 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2020-05-10 14:29:35,675 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin\proxyserver.jks
+2020-05-10 14:29:37,005 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-05-10 14:29:37,005 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-05-10 14:29:37,005 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-05-10 14:29:37,005 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-05-10 14:29:57,152 INFO o.a.j.g.a.v.TreeClonerForValidation: Running validation with number of threads:1, ignoreTimers:true, number of iterations:1
+2020-05-10 14:29:57,156 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-05-10 14:29:57,157 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-05-10 14:29:57,157 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-05-10 14:29:58,197 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:29:58,202 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:29:59,206 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:29:59,206 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:00,209 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:00,209 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:00,210 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-05-10 14:30:00,434 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:00,436 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:00,436 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:00,441 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 1. const-READ-ENTITY
+2020-05-10 14:30:00,442 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group 1. const-READ-ENTITY.
+2020-05-10 14:30:00,442 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2020-05-10 14:30:00,446 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-05-10 14:30:00,448 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2020-05-10 14:30:00,457 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:00,458 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:00,459 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:00,462 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:00,469 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:00,470 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:00,474 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:00,475 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:00,478 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:00,477 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:00,482 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:00,491 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-QVOVGC2
+2020-05-10 14:30:00,491 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:00,494 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:00,497 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:00,498 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:00,502 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:00,503 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2020-05-10 14:30:00,508 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:00,508 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:00,508 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:00,511 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:00,512 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:00,513 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:00,514 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:00,515 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:00,515 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:00,516 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:00,517 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:00,517 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:00,517 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:00,519 INFO o.a.j.t.JMeterThread: Thread started: 1. const-READ-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:01,436 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:01,436 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:01,437 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:01,655 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2020-05-10 14:30:01,655 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2020-05-10 14:30:02,439 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:02,440 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:02,443 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:03,443 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:03,444 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:03,445 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:04,446 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:04,447 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:04,449 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:05,449 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:05,450 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:05,451 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:05,529 INFO c.b.j.t.c.ConcurrencyThreadStarter: Done supplying threads
+2020-05-10 14:30:05,544 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:05,544 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:05,552 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:05,552 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:05,618 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:05,618 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:05,621 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:05,621 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:05,629 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:05,629 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:05,633 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:05,633 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:05,634 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:05,634 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:05,639 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:05,639 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:05,641 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:05,641 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:05,662 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:05,662 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:05,666 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:05,666 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:05,666 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:05,666 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:05,668 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:05,668 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:05,670 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:05,670 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:05,673 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:05,673 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:05,686 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:05,687 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:05,687 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:05,687 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:05,689 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:05,689 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:05,690 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:05,690 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:05,693 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:05,693 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:05,693 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:05,694 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:05,694 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:05,694 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:05,694 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:05,695 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:05,696 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:05,696 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:05,699 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:05,699 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:05,704 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:05,705 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:05,705 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:05,705 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:05,707 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:05,707 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:05,707 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:05,707 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:05,708 INFO o.a.j.t.JMeterThread: Thread is done: 1. const-READ-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:05,708 INFO o.a.j.t.JMeterThread: Thread finished: 1. const-READ-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:05,709 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-05-10 14:30:05,717 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-05-10 14:30:14,254 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-05-10 14:30:14,254 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-05-10 14:30:14,302 INFO o.a.j.r.ResultCollector: Folder at D:\X semestr\magisterka\dev\master\jmeter\jmeter-5.2.1\bin\{__P(tableReportPath,)}\modify-entity\incremental was created
+2020-05-10 14:30:15,305 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:15,305 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:16,308 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:16,308 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:17,310 INFO k.a.j.p.PerfMonCollector: Can't connect TCP transport for host: localhost/127.0.0.1:4444
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:17,310 ERROR k.a.j.p.PerfMonCollector: Problems creating connector
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_201]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_201]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_201]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_201]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_201]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_201]
+	at kg.apc.perfmon.client.TransportFactory.TCPInstance(TransportFactory.java:91) ~[perfmon-2.2.2.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.getConnector(PerfMonCollector.java:243) ~[jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnector(PerfMonCollector.java:228) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.initiateConnectors(PerfMonCollector.java:175) [jmeter-plugins-perfmon-2.1.jar:?]
+	at kg.apc.jmeter.perfmon.PerfMonCollector.testStarted(PerfMonCollector.java:126) [jmeter-plugins-perfmon-2.1.jar:?]
+	at org.apache.jmeter.reporters.ResultCollector.testStarted(ResultCollector.java:351) [ApacheJMeter_core.jar:5.2.1]
+	at kg.apc.jmeter.vizualizers.CorrectedResultCollector.testStarted(CorrectedResultCollector.java:28) [jmeter-plugins-cmn-jmeter-0.6.jar:?]
+	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfStart(StandardJMeterEngine.java:206) [ApacheJMeter_core.jar:5.2.1]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:381) [ApacheJMeter_core.jar:5.2.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-10 14:30:17,311 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-05-10 14:30:17,455 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:17,460 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 2. incremental-MODIFY-ENTITY
+2020-05-10 14:30:17,460 INFO o.a.j.e.StandardJMeterEngine: Starting 30 threads for group 2. incremental-MODIFY-ENTITY.
+2020-05-10 14:30:17,460 INFO o.a.j.e.StandardJMeterEngine: Thread will start next loop on error
+2020-05-10 14:30:17,461 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:17,461 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-05-10 14:30:17,461 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:17,462 INFO c.b.j.t.c.ConcurrencyThreadStarter: Start supplying threads
+2020-05-10 14:30:17,464 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:17,464 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:17,466 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:17,466 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:17,470 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:17,473 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:17,474 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:17,479 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:17,481 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:17,482 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:17,483 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:17,486 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:17,487 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:17,491 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:17,494 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:17,494 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:17,497 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:17,500 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:17,503 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:17,507 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:17,507 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:17,508 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:17,510 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:17,512 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:17,513 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:17,511 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:17,511 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:17,518 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:17,527 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:17,527 INFO o.a.j.t.JMeterThread: Thread started: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:18,464 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:18,465 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:18,465 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:19,467 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:19,468 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:19,469 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:20,470 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:20,471 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:20,472 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:21,473 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:21,474 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:21,475 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:22,478 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:22,480 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:22,481 ERROR k.a.j.p.PerfMonCollector: Perfmon plugin error: java.net.ConnectException: Connection refused: connect
+2020-05-10 14:30:22,501 INFO c.b.j.t.c.ConcurrencyThreadStarter: Done supplying threads
+2020-05-10 14:30:22,503 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:22,503 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-23
+2020-05-10 14:30:22,510 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:22,510 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-10
+2020-05-10 14:30:22,528 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:22,528 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:22,528 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-30
+2020-05-10 14:30:22,528 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-27
+2020-05-10 14:30:22,540 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:22,540 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-21
+2020-05-10 14:30:22,545 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:22,545 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-14
+2020-05-10 14:30:22,547 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:22,548 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-22
+2020-05-10 14:30:22,554 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:22,555 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-16
+2020-05-10 14:30:22,558 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:22,559 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-2
+2020-05-10 14:30:22,559 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:22,559 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-25
+2020-05-10 14:30:22,561 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:22,561 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-19
+2020-05-10 14:30:22,569 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:22,569 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-5
+2020-05-10 14:30:22,575 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:22,575 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-15
+2020-05-10 14:30:22,579 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:22,580 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-4
+2020-05-10 14:30:22,581 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:22,581 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-1
+2020-05-10 14:30:22,585 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:22,586 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-24
+2020-05-10 14:30:22,588 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:22,588 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-28
+2020-05-10 14:30:22,598 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:22,598 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-8
+2020-05-10 14:30:22,620 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:22,620 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-11
+2020-05-10 14:30:22,624 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:22,624 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:22,624 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-6
+2020-05-10 14:30:22,624 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-20
+2020-05-10 14:30:22,625 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:22,625 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-12
+2020-05-10 14:30:22,626 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:22,627 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-17
+2020-05-10 14:30:22,633 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:22,633 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-26
+2020-05-10 14:30:22,634 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:22,634 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-13
+2020-05-10 14:30:22,636 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:22,636 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-7
+2020-05-10 14:30:22,637 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:22,637 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-18
+2020-05-10 14:30:22,638 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:22,638 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-9
+2020-05-10 14:30:22,639 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:22,639 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-29
+2020-05-10 14:30:22,640 INFO o.a.j.t.JMeterThread: Thread is done: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:22,641 INFO o.a.j.t.JMeterThread: Thread finished: 2. incremental-MODIFY-ENTITY-ThreadStarter 1-3
+2020-05-10 14:30:22,641 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-05-10 14:30:22,643 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
