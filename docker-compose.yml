@@ -10,7 +10,7 @@ services:
       - ${BOOT_PORT}:${BOOT_PORT}
       #- 4444:4444 # Jmeter Permon debugging
     environment: 
-      - MASTER_HOST=master
+      - MASTER_HOST=${MASTER_HOST}
       - MASTER_PORT=${MASTER_PORT}
       - WORKER_HOST=${BOOT_MYSQL_HOST}
       - WORKER_PORT=${BOOT_PORT}

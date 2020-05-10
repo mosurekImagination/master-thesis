@@ -4,13 +4,13 @@ echo "setting Poland timeZone"
 cp /usr/share/zoneinfo/Europe/Warsaw /etc/localtime -f
 echo "Europe/Warsaw" >  /etc/timezone
 
-echo "WAITING 100sec to systems up"
+# echo "WAITING 100sec to systems up"
 # sleep 50
-echo "50sec remaining"
+# echo "50sec remaining"
 #sleep 50
 
 echo "### CREATING RESULTS DIRECTORY ###"
-dateTime=$(date +'%Y-%m-%d-%H.%M')
+dateTime="$(date +'%Y-%m-%d-%H:%M:%S')"
 echo $dateTime
 resultsFolder=./test-results/$dateTime
 tempResultsFolder=./temp-test-results
@@ -24,17 +24,22 @@ mkdir $FIRST_WORKER_RESULTS
 mkdir $SECOND_WORKER_RESULTS
 mkdir $THIRD_WORKER_RESULTS
 
+(
 echo "### $dateTime STARTING 1 LOAD TESTING OF $FIRST_WORKER_HOST:$FIRST_WORKER_PORT ###"
-./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$FIRST_WORKER_HOST -Jhostport=$FIRST_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $FIRST_WORKER_RESULTS/results.log -e -o $FIRST_WORKER_RESULTS/report/ -JperfmonReportPath=$FIRST_WORKER_RESULTS -JaggregateReportPath=$FIRST_WORKER_RESULTS -JsummaryReportPath=$FIRST_WORKER_RESULTS -JgraphReportPath=$FIRST_WORKER_RESULTS -JtableReportPath=$FIRST_WORKER_RESULTS &
+./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$FIRST_WORKER_HOST -Jhostport=$FIRST_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $FIRST_WORKER_RESULTS/results.log -e -o $FIRST_WORKER_RESULTS/report/ -JperfmonReportPath=$FIRST_WORKER_RESULTS -JaggregateReportPath=$FIRST_WORKER_RESULTS -JsummaryReportPath=$FIRST_WORKER_RESULTS -JgraphReportPath=$FIRST_WORKER_RESULTS -JtableReportPath=$FIRST_WORKER_RESULTS
+) &
 
+(
 echo "### STARTING 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
-./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $SECOND_WORKER_RESULTS/results.log -e -o $SECOND_WORKER_RESULTS/report/ -JperfmonReportPath=$SECOND_WORKER_RESULTS -JaggregateReportPath=$SECOND_WORKER_RESULTS -JsummaryReportPath=$SECOND_WORKER_RESULTS -JgraphReportPath=$SECOND_WORKER_RESULTS -JtableReportPath=$SECOND_WORKER_RESULTS  &
+./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $SECOND_WORKER_RESULTS/results.log -e -o $SECOND_WORKER_RESULTS/report/ -JperfmonReportPath=$SECOND_WORKER_RESULTS -JaggregateReportPath=$SECOND_WORKER_RESULTS -JsummaryReportPath=$SECOND_WORKER_RESULTS -JgraphReportPath=$SECOND_WORKER_RESULTS -JtableReportPath=$SECOND_WORKER_RESULTS
+) &
 
+(
 echo "### STARTING 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
-./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $THIRD_WORKER_RESULTS/results.log -e -o $THIRD_WORKER_RESULTS/report/ -JperfmonReportPath=$THIRD_WORKER_RESULTS -JaggregateReportPath=$THIRD_WORKER_RESULTS -JsummaryReportPath=$THIRD_WORKER_RESULTS -JgraphReportPath=$THIRD_WORKER_RESULTS -JtableReportPath=$THIRD_WORKER_RESULTS &
+./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $THIRD_WORKER_RESULTS/results.log -e -o $THIRD_WORKER_RESULTS/report/ -JperfmonReportPath=$THIRD_WORKER_RESULTS -JaggregateReportPath=$THIRD_WORKER_RESULTS -JsummaryReportPath=$THIRD_WORKER_RESULTS -JgraphReportPath=$THIRD_WORKER_RESULTS -JtableReportPath=$THIRD_WORKER_RESULTS
+) &
 
-echo "### LOAD TESTING STARTED 2###"
-
-trap : TERM INT # precent script bash from closing
-tail -f /dev/null & wait
+wait 
+# trap : TERM INT # prevent script bash from closing
+# tail -f /dev/null & wait
 

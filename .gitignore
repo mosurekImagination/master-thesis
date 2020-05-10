@@ -1,15 +1,10 @@
 # /master/jmeter/jmeter-5.2.1/*
 /master/jmeter/test-results/*
 .idea/
-# ServerAgent/*
-# lib/*
 # /workers/boot-mysql/lib/
 # /workers/webflux-mongodb/lib/
 # /workers/webflux-mysql/lib/
-master/jmeter/jmeter-5.2.1/backups/
 master/jmeter/jmeter-5.2.1/*
-master/jmeter/jmeter-5.2.1/backups/*
-master/jmeter/jmeter-5.2.1/bin/jmeter.log
-master-thesis.pem
-test.sh
-master/jmeter/jmeter-5.2.1/bin/PluginsManagerCMD.sh
+*.pem
+*.log
+scripts/test-results/*
