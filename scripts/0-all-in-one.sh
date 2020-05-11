@@ -5,9 +5,9 @@ echo "New running $dateTime" | tee -a script.log
 # c5.large
 
 # # $0.17 per Hour
-masterInstance=m5.xlarge
+masterInstance=t2.large
 # # $0.096 per Hour
-workerInstance=m5.large 
+workerInstance=t2.medium 
 
 ./99-terminate-amazon-instances.sh
 
@@ -32,7 +32,7 @@ workerPrivate=$(sh ./5-get-private-dns.sh $workerInstance | sed -e ':a' -e '$!{'
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - workerPrivate: $workerPrivate" | tee -a script.log 
 
 # run performance test on instances
-echo "$master $workers $masterPrivate $workersPrivate" | xargs ./3-run-performence-check.sh
+echo "$master $workers $masterPrivate $workerPrivate" | xargs ./3-run-performence-check.sh
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - terminate workers: $workers" | tee -a script.log 
 ./98-terminate-workers.sh $workerInstance
