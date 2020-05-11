@@ -58,6 +58,7 @@ sudo yum install git -y
 git clone https://github.com/mosurekImagination/master-thesis.git
 sudo find ./ -iname entrypoint.sh -type f -exec chmod +x {} \;
 sudo find ./ -iname jmeter.sh -type f -exec chmod +x {} \;
+sudo find ./ -iname startAgent.sh -type f -exec chmod +x {} \;
 ENDSSH
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - configuration finished: $host" | tee -a script.log 

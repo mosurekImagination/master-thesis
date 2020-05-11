@@ -1,8 +1,13 @@
 dateTime="$(date +'%Y-%m-%d-%H:%M:%S')"
 echo "New running $dateTime" | tee -a script.log 
 
-masterInstance=c5n.xlarge
-workerInstance=c5n.large
+# working m5.large
+# c5.large
+
+# $0.17 per Hour
+masterInstance=m5.xlarge
+# $0.096 per Hour
+workerInstance=m5.large 
 
 ./99-terminate-amazon-instances.sh
 
