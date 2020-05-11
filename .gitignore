@@ -1,10 +1,9 @@
-# /master/jmeter/jmeter-5.2.1/*
+/master/jmeter/jmeter-5.2.1/*
 /master/jmeter/test-results/*
 .idea/
 # /workers/boot-mysql/lib/
 # /workers/webflux-mongodb/lib/
 # /workers/webflux-mysql/lib/
-master/jmeter/jmeter-5.2.1/*
 *.pem
 *.log
 scripts/test-results/*

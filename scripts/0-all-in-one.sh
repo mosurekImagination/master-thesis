@@ -1,10 +1,10 @@
 dateTime="$(date +'%Y-%m-%d-%H:%M:%S')"
 echo "New running $dateTime" | tee -a script.log 
 
-masterInstance=t2.large
-workerInstance=t2.medium
+masterInstance=c5n.xlarge
+workerInstance=c5n.large
 
-# ./99-terminate-amazon-instances.sh
+./99-terminate-amazon-instances.sh
 
 # initialize master
 ./1-run-amazon-instances.sh 1 $masterInstance
@@ -31,5 +31,6 @@ echo "$(date +'%Y-%m-%d-%H:%M:%S') - fetching results: $workers" | tee -a script
 ./4-fetch-results.sh $master
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - terminate master: $master" | tee -a script.log 
-./98-terminate-workers.sh $masterInstance
+# ./98-terminate-workers.sh $masterInstance
 
+echo "THANK YOU FOR USING THIS 'FRAMEWORK' "

@@ -10,7 +10,7 @@ echo "Europe/Warsaw" >  /etc/timezone
 #sleep 50
 
 echo "### CREATING RESULTS DIRECTORY ###"
-dateTime="$(date +'%Y-%m-%d-%H:%M:%S')"
+dateTime="$(date +'%Y-%m-%d--%H-%M-%S')"
 echo $dateTime
 resultsFolder=./test-results/$dateTime
 tempResultsFolder=./temp-test-results

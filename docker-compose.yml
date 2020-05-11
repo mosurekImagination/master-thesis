@@ -8,7 +8,7 @@ services:
       context: ./workers/boot-mysql/
     ports:
       - ${BOOT_PORT}:${BOOT_PORT}
-      #- 4444:4444 # Jmeter Permon debugging
+      - 4444:4444 # Jmeter Permon debugging
     environment: 
       - MASTER_HOST=${MASTER_HOST}
       - MASTER_PORT=${MASTER_PORT}
@@ -27,7 +27,7 @@ services:
       context: ./workers/webflux-mongodb/
     ports:
       - ${WEBFLUX_MONGODB_PORT}:${WEBFLUX_MONGODB_PORT}
-      #- 4444:4444  # Jmeter Permon debugging
+      - 4444:4444  # Jmeter Permon debugging
     environment: 
       - MASTER_HOST=${MASTER_HOST}
       - MASTER_PORT=${MASTER_PORT}
@@ -46,7 +46,7 @@ services:
       context: ./workers/webflux-mysql/
     ports:
       - ${WEBFLUX_MYSQL_PORT}:${WEBFLUX_MYSQL_PORT}
-      #- 4444:4444  # Jmeter Permon debugging
+      - 4444:4444  # Jmeter Permon debugging
     environment: 
       - MASTER_HOST=${MASTER_HOST}
       - MASTER_PORT=${MASTER_PORT}
