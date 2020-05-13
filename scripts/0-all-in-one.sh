@@ -5,10 +5,10 @@ echo "New running $dateTime" | tee -a script.log
 # c5.large
 
 # # $0.17 per Hour
-masterInstance=c5.xlarge
+masterInstance=c5.large
 # # $0.096 per Hour
 #WORKER HAS TO BE DIFFERENT THAN MASTER
-workerInstance=c5.large
+workerInstance=c5.xlarge
 
 ./99-terminate-amazon-instances.sh
 
