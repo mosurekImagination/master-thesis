@@ -5,7 +5,7 @@ echo "New running $dateTime" | tee -a script.log
 # c5.large
 
 # # $0.17 per Hour
-masterInstance=c5.large
+masterInstance=m5.xlarge
 # # $0.096 per Hour
 #WORKER HAS TO BE DIFFERENT THAN MASTER
 workerInstance=c5.xlarge
