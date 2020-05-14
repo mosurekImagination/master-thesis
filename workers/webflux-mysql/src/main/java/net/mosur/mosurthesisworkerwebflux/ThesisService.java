@@ -10,6 +10,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.io.File;
+import java.math.BigInteger;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
@@ -46,13 +47,13 @@ public class ThesisService {
                 .build();
     }
 
-    public Mono<Long> fibonacci(long input) {
-        if (input == 0) return Mono.just(0L);
-        if (input == 1) return Mono.just(1L);
-        if (input == 2) return Mono.just(2L);
-        long n1 = 1, n2 = 1, n3 = 0;
+    public Mono<BigInteger> fibonacci(long input) {
+        if (input == 0) return Mono.just(BigInteger.ZERO);
+        if (input == 1) return Mono.just(BigInteger.ONE);
+        if (input == 2) return Mono.just(BigInteger.valueOf(2));
+        BigInteger n1 = BigInteger.ONE, n2 = BigInteger.ONE, n3 = BigInteger.ZERO;
         for (long i = 2; i < input; ++i) {
-            n3 = n1 + n2;
+            n3 = n1.add(n2);
             n1 = n2;
             n2 = n3;
         }
@@ -80,7 +81,7 @@ public class ThesisService {
                         .build());
     }
 
-    private static final String TEXT = IntStream.range(0,300)
+    private static final String TEXT = IntStream.range(0,500)
             .mapToObj(e -> getParagraph())
             .collect(Collectors.joining());
 

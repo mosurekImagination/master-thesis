@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigInteger;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -32,7 +33,7 @@ public class Controller {
     }
 
     @GetMapping("fibonacci/{input}")
-    public Long fibonacci(@PathVariable long input) {
+    public BigInteger fibonacci(@PathVariable long input) {
         log.info("fibonacci");
         return thesisService.fibonacci(input);
     }

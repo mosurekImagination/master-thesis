@@ -1959,7 +1959,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="5. incremental-READ-FILE" enabled="false">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="5. incremental-READ-FILE" enabled="true">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">600</stringProp>
@@ -2114,9 +2114,9 @@
       <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="6. incremental-FIB" enabled="true">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
-        <stringProp name="TargetLevel">1000</stringProp>
+        <stringProp name="TargetLevel">1500</stringProp>
         <stringProp name="RampUp">${incremental-rampUpTime}</stringProp>
-        <stringProp name="Steps">1000</stringProp>
+        <stringProp name="Steps">1500</stringProp>
         <stringProp name="Hold">${incremental-holdTargetRate}</stringProp>
         <stringProp name="LogFilename"></stringProp>
         <stringProp name="Iterations"></stringProp>
@@ -3463,7 +3463,7 @@
           </elementProp>
           <elementProp name="fibonacciInput" elementType="Argument">
             <stringProp name="Argument.name">fibonacciInput</stringProp>
-            <stringProp name="Argument.value">${__P(fibonacciInput,10000)}</stringProp>
+            <stringProp name="Argument.value">${__P(fibonacciInput,15000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="defaultDelay" elementType="Argument">

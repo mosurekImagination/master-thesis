@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigInteger;
 import java.util.Random;
 
 
@@ -28,7 +29,7 @@ public class Controller {
     }
 
     @GetMapping("fibonacci/{input}")
-    public Mono<Long> fibonacci(@PathVariable long input) {
+    public Mono<BigInteger> fibonacci(@PathVariable long input) {
         log.info("fibonacci");
         return thesisService.fibonacci(input);
     }

@@ -7,6 +7,7 @@ import net.mosur.masterthesisboot.entity.EntityRepository;
 import net.mosur.masterthesisboot.entity.ThesisEntity;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Random;
@@ -41,13 +42,13 @@ public class ThesisService {
                 .build();
     }
 
-    public Long fibonacci(long input) {
-        if (input == 0) return 0L;
-        if (input == 1) return 1L;
-        if (input == 2) return 2L;
-        long n1 = 1, n2 = 1, n3 = 0;
+    public BigInteger fibonacci(long input) {
+        if (input == 0) return BigInteger.ZERO;
+        if (input == 1) return BigInteger.ONE;
+        if (input == 2) return BigInteger.valueOf(2);
+        BigInteger n1 = BigInteger.ONE, n2 = BigInteger.ONE, n3 = BigInteger.ZERO;
         for (long i = 2; i < input; ++i) {
-            n3 = n1 + n2;
+            n3 = n1.add(n2);
             n1 = n2;
             n2 = n3;
         }
@@ -75,7 +76,7 @@ public class ThesisService {
                         .build());
     }
 
-    private static final String TEXT = IntStream.range(0,300)
+    private static final String TEXT = IntStream.range(0,500)
             .mapToObj(e -> getParagraph())
             .collect(Collectors.joining());
 
