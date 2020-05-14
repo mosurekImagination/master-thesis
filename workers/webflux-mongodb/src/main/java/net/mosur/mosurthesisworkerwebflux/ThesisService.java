@@ -1,5 +1,6 @@
 package net.mosur.mosurthesisworkerwebflux;
 
+import io.netty.util.ReferenceCounted;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -8,6 +9,7 @@ import net.mosur.mosurthesisworkerwebflux.entity.ThesisEntity;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.netty.ByteBufFlux;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
@@ -64,11 +66,14 @@ public class ThesisService {
 
     @SneakyThrows
     public Flux<String> getFile() {
-        return fromPath(
+        ByteBufFlux byteBufFlux = fromPath(
                 Paths.get("/app/file.txt")
-                )
+        );
+        Flux<String> text = byteBufFlux
                 .asString(StandardCharsets.UTF_8)
                 .map(String::toUpperCase);
+        byteBufFlux.map(ReferenceCounted::release);
+        return text;
     }
 
     public Stream<ThesisEntity> generateSomeEntities(long amount, int range) {
