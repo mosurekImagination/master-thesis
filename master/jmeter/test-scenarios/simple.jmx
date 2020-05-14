@@ -3552,7 +3552,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="targetConcurrency" elementType="Argument">
             <stringProp name="Argument.name">targetConcurrency</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampUpTime" elementType="Argument">
@@ -3577,7 +3577,7 @@
           </elementProp>
           <elementProp name="incremental-rampUpSteps" elementType="Argument">
             <stringProp name="Argument.name">incremental-rampUpSteps</stringProp>
-            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="incremental-holdTargetRate" elementType="Argument">
