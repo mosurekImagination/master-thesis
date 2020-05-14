@@ -1324,7 +1324,7 @@
         </ConstantTimer>
         <hashTree/>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="1. incremental-READ-ENTITY" enabled="false">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="1. incremental-READ-ENTITY" enabled="true">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
         <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
@@ -1336,6 +1336,15 @@
         <stringProp name="Unit">S</stringProp>
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+          <intProp name="calcMode">0</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>20.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-ENTITY" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -1503,10 +1512,6 @@
           <stringProp name="filename">${__P(tableReportPath,)}/${read-entity}/${secondGroup}/resultsTable.csv</stringProp>
         </ResultCollector>
         <hashTree/>
-        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">50</stringProp>
-        </ConstantTimer>
-        <hashTree/>
       </hashTree>
       <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="2. incremental-MODIFY-ENTITY" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
@@ -1651,7 +1656,7 @@
         </ResultCollector>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">50</stringProp>
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
         </ConstantTimer>
         <hashTree/>
       </hashTree>
@@ -1687,7 +1692,7 @@
         </HTTPSamplerProxy>
         <hashTree/>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">100</stringProp>
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="false">
@@ -1815,7 +1820,7 @@
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">50</stringProp>
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-TEXT" enabled="true">
@@ -1962,7 +1967,7 @@
       </com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup>
       <hashTree>
         <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">50</stringProp>
+          <stringProp name="ConstantTimer.delay">1000</stringProp>
         </ConstantTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="READ-FILE" enabled="true">
@@ -2096,10 +2101,10 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="6. incremental-FIB" enabled="true">
+      <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="6. incremental-FIB" enabled="false">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
-        <stringProp name="TargetLevel">${targetConcurrency}</stringProp>
+        <stringProp name="TargetLevel">1000</stringProp>
         <stringProp name="RampUp">${incremental-rampUpTime}</stringProp>
         <stringProp name="Steps">${incremental-rampUpSteps}</stringProp>
         <stringProp name="Hold">${incremental-holdTargetRate}</stringProp>
@@ -3443,7 +3448,7 @@
           </elementProp>
           <elementProp name="fibonacciInput" elementType="Argument">
             <stringProp name="Argument.name">fibonacciInput</stringProp>
-            <stringProp name="Argument.value">${__P(fibonacciInput,7500)}</stringProp>
+            <stringProp name="Argument.value">${__P(fibonacciInput,600)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="defaultDelay" elementType="Argument">
@@ -3547,7 +3552,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="targetConcurrency" elementType="Argument">
             <stringProp name="Argument.name">targetConcurrency</stringProp>
-            <stringProp name="Argument.value">4000</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampUpTime" elementType="Argument">
@@ -3572,7 +3577,7 @@
           </elementProp>
           <elementProp name="incremental-rampUpSteps" elementType="Argument">
             <stringProp name="Argument.name">incremental-rampUpSteps</stringProp>
-            <stringProp name="Argument.value">600</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="incremental-holdTargetRate" elementType="Argument">
