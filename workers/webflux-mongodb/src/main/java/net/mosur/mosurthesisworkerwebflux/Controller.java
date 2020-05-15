@@ -9,6 +9,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.math.BigInteger;
+import java.util.UUID;
 import java.util.Random;
 
 
@@ -99,7 +100,7 @@ public class Controller {
         log.info("modify-one");
         return entityRepository.findFirstByNumber(number).map(e ->
         {
-            e.setNumber((long)random.nextInt(range));
+            e.setName(UUID.randomUUID().toString());
             entityRepository.save(e);
             return e;
         });

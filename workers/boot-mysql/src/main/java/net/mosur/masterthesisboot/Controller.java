@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigInteger;
+import java.util.Optional;
 import java.util.Random;
+import java.util.UUID;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/")
@@ -45,11 +46,11 @@ public class Controller {
     }
 
     @GetMapping("fib/{input}/find-one/{number}")
-    public ThesisEntity fibonacciAndThenFindOne(@PathVariable long input,
-                                                @PathVariable long number) {
+    public Optional<ThesisEntity> fibonacciAndThenFindOne(@PathVariable long input,
+                                                          @PathVariable long number) {
         log.info("fibonacci-and-then-find-one");
         thesisService.fibonacci(input);
-        return entityRepository.findFirstByNumber(number).get();
+        return entityRepository.findFirstByNumber(number);
     }
 
     @GetMapping("read-file")
@@ -76,9 +77,9 @@ public class Controller {
     }
 
     @GetMapping("find-one/{number}")
-    public ThesisEntity getEntity(@PathVariable("number") long number) {
+    public Optional<ThesisEntity> getEntity(@PathVariable("number") long number) {
         log.info("find-one");
-        return entityRepository.findFirstByNumber(number).get();
+        return entityRepository.findFirstByNumber(number);
     }
 
     @GetMapping("generate-one/{range}")
@@ -94,14 +95,14 @@ public class Controller {
     }
 
     @GetMapping("modify-one/{number}/{range}")
-    public ThesisEntity generate(@PathVariable long number, @PathVariable int range) {
+    public Optional<ThesisEntity> modifyOne(@PathVariable long number, @PathVariable int range) {
         log.info("modify-one");
         return entityRepository.findFirstByNumber(number).map(e ->
         {
-            e.setNumber((long)random.nextInt(range));
+            e.setName(UUID.randomUUID().toString());
             entityRepository.save(e);
             return e;
-        }).get();
+        });
     }
 
     @GetMapping("clear-database")
