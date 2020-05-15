@@ -76,7 +76,7 @@ public class ThesisService {
                         .build());
     }
 
-    private static final String TEXT = IntStream.range(0,500)
+    private static final String TEXT = IntStream.range(0,1500)
             .mapToObj(e -> getParagraph())
             .collect(Collectors.joining());
 

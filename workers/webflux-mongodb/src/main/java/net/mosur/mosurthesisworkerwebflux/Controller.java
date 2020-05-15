@@ -40,6 +40,14 @@ public class Controller {
         return thesisService.getText();
     }
 
+    @GetMapping("fib/{input}/find-one/{number}")
+    public Mono<ThesisEntity> fibonacciAndThenFindOne(@PathVariable long input,
+                                                      @PathVariable long number) {
+        log.info("fibonacci-and-then-find-one");
+        thesisService.fibonacci(input);
+        return entityRepository.findFirstByNumber(number);
+    }
+
     @GetMapping("read-file")
     public Flux<String> getFile() {
         log.info("read-file");
@@ -92,6 +100,7 @@ public class Controller {
         return entityRepository.findFirstByNumber(number).map(e ->
         {
             e.setNumber((long)random.nextInt(range));
+            entityRepository.save(e);
             return e;
         });
     }
