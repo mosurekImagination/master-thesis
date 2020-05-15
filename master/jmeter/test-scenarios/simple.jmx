@@ -2458,7 +2458,7 @@
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/fib/8000/find-one/${randomElementId}</stringProp>
+          <stringProp name="HTTPSampler.path">/fib/8500/find-one/${randomElementId}</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -3984,13 +3984,13 @@
           </elementProp>
           <elementProp name="elementsInDatabase" elementType="Argument">
             <stringProp name="Argument.name">elementsInDatabase</stringProp>
-            <stringProp name="Argument.value">20000</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
             <stringProp name="Argument.desc">${__P(elementsInDatabase,10000)}</stringProp>
           </elementProp>
           <elementProp name="fibonacciInput" elementType="Argument">
             <stringProp name="Argument.name">fibonacciInput</stringProp>
-            <stringProp name="Argument.value">${__P(fibonacciInput,10000)}</stringProp>
+            <stringProp name="Argument.value">${__P(fibonacciInput,8500)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="defaultDelay" elementType="Argument">
@@ -4002,7 +4002,7 @@
       </Arguments>
       <hashTree/>
       <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="RANDOM - elementId" enabled="true">
-        <stringProp name="maximumValue">19999</stringProp>
+        <stringProp name="maximumValue">1000</stringProp>
         <stringProp name="minimumValue">1</stringProp>
         <stringProp name="outputFormat"></stringProp>
         <boolProp name="perThread">true</boolProp>
@@ -4094,7 +4094,7 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="targetConcurrency" elementType="Argument">
             <stringProp name="Argument.name">targetConcurrency</stringProp>
-            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.value">3000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="rampUpTime" elementType="Argument">
@@ -4119,7 +4119,7 @@
           </elementProp>
           <elementProp name="incremental-rampUpSteps" elementType="Argument">
             <stringProp name="Argument.name">incremental-rampUpSteps</stringProp>
-            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.value">3000</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="incremental-holdTargetRate" elementType="Argument">
