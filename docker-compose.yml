@@ -102,6 +102,8 @@ services:
       - SECOND_WORKER_PORT=${BOOT_PORT}
       - THIRD_WORKER_HOST=${WEBFLUX_MYSQL_HOST}
       - THIRD_WORKER_PORT=${WEBFLUX_MYSQL_PORT}
+      - FOURTH_WORKER_HOST=${BOOT_MONGODB_HOST}
+      - FOURTH_WORKER_PORT=${BOOT_MONGODB_PORT}
   prometheus:
     container_name: thesis_prometheus
     ports:
@@ -113,7 +115,7 @@ services:
       dockerfile: Dockerfile
       context: ./master/prometheus/
     environment: 
-      - WORKERS=['${WEBFLUX_MONGODB_HOST}:${WEBFLUX_MONGODB_PORT}','${BOOT_MYSQL_HOST}:${BOOT_PORT}', '${WEBFLUX_MYSQL_HOST}:${WEBFLUX_MYSQL_PORT}']
+      - WORKERS=['${WEBFLUX_MONGODB_HOST}:${WEBFLUX_MONGODB_PORT}','${BOOT_MYSQL_HOST}:${BOOT_PORT}', '${WEBFLUX_MYSQL_HOST}:${WEBFLUX_MYSQL_PORT}', '${BOOT_MONGODB_HOST}:${BOOT_MONGODB_PORT}']
   mysql:
     container_name: thesis_mysql
     build: 

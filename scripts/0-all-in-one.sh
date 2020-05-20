@@ -16,7 +16,7 @@ workerInstance=c5.xlarge
 ./1-run-amazon-instances.sh 1 $masterInstance
 
 # # initialize workers
-./1-run-amazon-instances.sh 3 $workerInstance
+./1-run-amazon-instances.sh 4 $workerInstance
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - waiting 60 sec to get instances ready"
 sleep 60
@@ -36,12 +36,12 @@ echo "$(date +'%Y-%m-%d-%H:%M:%S') - workerPrivate: $workerPrivate" | tee -a scr
 echo "$master $workers $masterPrivate $workerPrivate" | xargs ./3-run-performence-check.sh
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - terminate workers: $workers" | tee -a script.log 
-./98-terminate-workers.sh $workerInstance
+# ./98-terminate-workers.sh $workerInstance
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - fetching results: $workers" | tee -a script.log 
 ./4-fetch-results.sh $master
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - terminate master: $master" | tee -a script.log 
-./98-terminate-workers.sh $masterInstance
+# ./98-terminate-workers.sh $masterInstance
 
 echo "THANK YOU FOR USING THIS 'FRAMEWORK' "

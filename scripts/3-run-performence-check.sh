@@ -1,22 +1,27 @@
 # echo "MASTER_HOST: $1"
 MASTER_HOST=$1
 MASTER_PORT=8080
-MASTER_PRIVATE=$5
+MASTER_PRIVATE=$6
 
 # echo "WEBFLUX_MONGODB_HOST: $2"
 WEBFLUX_MONGODB_HOST=$2
 WEBFLUX_MONGODB_PORT=8081
-WEBFLUX_MONGODB_PRIVATE=$6
+WEBFLUX_MONGODB_PRIVATE=$7
 
 # echo "BOOT_MYSQL_HOST: $3"
 BOOT_MYSQL_HOST=$3
 BOOT_PORT=8082
-BOOT_MYSQL_PRIVATE=$7
+BOOT_MYSQL_PRIVATE=$8
 
 # echo "WEBFLUX_MYSQL_HOST: $4"
 WEBFLUX_MYSQL_HOST=$4
 WEBFLUX_MYSQL_PORT=8083
-WEBFLUX_MYSQL_PRIVATE=$8
+WEBFLUX_MYSQL_PRIVATE=$9
+
+# echo "BOOT_MONGODB_HOST: $4"
+BOOT_MONGODB_HOST=$5
+BOOT_MONGODB_PORT=8084
+BOOT_MONGODB_PRIVATE=$10
 
 #logging settings
 echo $dateTime | tee -a script.log 
@@ -24,15 +29,15 @@ echo "MASTER: $MASTER_HOST:$MASTER_PORT" | tee -a script.log
 echo "WEBFLUX_MONGODB: $WEBFLUX_MONGODB_HOST:$WEBFLUX_MONGODB_PORT" | tee -a script.log 
 echo "BOOT_MYSQL: $BOOT_MYSQL_HOST:$BOOT_PORT" | tee -a script.log 
 echo "WEBFLUX_MYSQL: $WEBFLUX_MYSQL_HOST:$WEBFLUX_MYSQL_PORT" | tee -a script.log 
+echo "BOOT_MONGODB: $BOOT_MONGODB_HOST:$BOOT_MONGODB_PORT" | tee -a script.log 
 
 echo "MASTER_PRIVATE: $MASTER_PRIVATE" | tee -a script.log 
 echo "WEBFLUX_MONGODB_PRIVATE: $WEBFLUX_MONGODB_PRIVATE" | tee -a script.log 
 echo "BOOT_MYSQL_PRIVATE: $BOOT_MYSQL_PRIVATE" | tee -a script.log 
 echo "WEBFLUX_MYSQL_PRIVATE: $WEBFLUX_MYSQL_PRIVATE" | tee -a script.log 
+echo "BOOT_MONGODB_PRIVATE: $BOOT_MONGODB_PRIVATE" | tee -a script.log 
 
-sleep 10
-
-hosts=($MASTER_HOST $WEBFLUX_MONGODB_HOST $BOOT_MYSQL_HOST $WEBFLUX_MYSQL_HOST)
+hosts=($MASTER_HOST $WEBFLUX_MONGODB_HOST $BOOT_MYSQL_HOST $WEBFLUX_MYSQL_HOST $BOOT_MONGODB_HOST)
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - adding fingerprints" | tee -a script.log 
 for host in ${hosts[*]}
@@ -113,6 +118,16 @@ cd master-thesis
 sudo MASTER_HOST=$MASTER_PRIVATE WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_HOST docker-compose up -d worker-webflux-mysql webflux-mysql
 ENDWORKER
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - worker-webflux-mysql is running" | tee -a script.log 
+) &
+
+(
+# run worker-boot-mongodb
+echo "$(date +'%Y-%m-%d-%H:%M:%S') - running worker-boot-mongodb" | tee -a script.log 
+ssh -i "master-thesis.pem" ec2-user@$BOOT_MONGODB_HOST <<-ENDWORKER
+cd master-thesis
+sudo MASTER_HOST=$MASTER_PRIVATE BOOT_MONGODB_HOST=$BOOT_MONGODB_HOST docker-compose up -d worker-boot-mongodb boot-mongodb
+ENDWORKER
+echo "$(date +'%Y-%m-%d-%H:%M:%S') - worker-boot-mongodb is running" | tee -a script.log 
 ) &
 
 wait
