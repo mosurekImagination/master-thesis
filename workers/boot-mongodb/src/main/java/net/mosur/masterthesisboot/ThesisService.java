@@ -1,31 +1,26 @@
-package net.mosur.mosurthesisworkerwebflux;
+package net.mosur.masterthesisboot;
 
-import io.netty.util.ReferenceCounted;
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import net.mosur.mosurthesisworkerwebflux.entity.EntityRepository;
-import net.mosur.mosurthesisworkerwebflux.entity.ThesisEntity;
+import net.mosur.masterthesisboot.entity.EntityRepository;
+import net.mosur.masterthesisboot.entity.ThesisEntity;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import reactor.netty.ByteBufFlux;
 
 import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-import static reactor.netty.ByteBufFlux.fromPath;
-
-@Service
-@RequiredArgsConstructor
 @Slf4j
+@Service
+@AllArgsConstructor
 public class ThesisService {
     private final EntityRepository entityRepository;
     private final Random random;
@@ -47,29 +42,30 @@ public class ThesisService {
                 .build();
     }
 
-    public Mono<BigInteger> fibonacci(long input) {
-        if (input == 0) return Mono.just(BigInteger.ZERO);
-        if (input == 1) return Mono.just(BigInteger.ONE);
-        if (input == 2) return Mono.just(BigInteger.valueOf(2));
+    public BigInteger fibonacci(long input) {
+        if (input == 0) return BigInteger.ZERO;
+        if (input == 1) return BigInteger.ONE;
+        if (input == 2) return BigInteger.valueOf(2);
         BigInteger n1 = BigInteger.ONE, n2 = BigInteger.ONE, n3 = BigInteger.ZERO;
         for (long i = 2; i < input; ++i) {
             n3 = n1.add(n2);
             n1 = n2;
             n2 = n3;
         }
-        return Mono.just(n3);
+        return n3;
+    }
+
+    public String getText() {
+        return TEXT;    
     }
 
     @SneakyThrows
-    public Flux<String> getFile() {
-        ByteBufFlux byteBufFlux = fromPath(
-                Paths.get("/app/file.txt")
-        );
-        Flux<String> text = byteBufFlux
-                .asString(StandardCharsets.UTF_8)
-                .map(String::toUpperCase);
-        byteBufFlux.map(ReferenceCounted::release);
-        return text;
+    public String getFile() {
+        return Files.newBufferedReader(
+                Paths.get("/app/file.txt"))
+                .lines()
+                .map(String::toUpperCase)
+                .collect(Collectors.joining());
     }
 
     public Stream<ThesisEntity> generateSomeEntities(long amount, int range) {
@@ -78,10 +74,6 @@ public class ThesisService {
                         .name(UUID.randomUUID().toString())
                         .number((long) random.nextInt(range))
                         .build());
-    }
-
-    public Mono<String> getText() {
-        return Mono.just(TEXT);
     }
 
     private static final String TEXT = IntStream.range(0,500)
