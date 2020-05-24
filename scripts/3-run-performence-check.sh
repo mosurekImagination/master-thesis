@@ -21,7 +21,7 @@ WEBFLUX_MYSQL_PRIVATE=$9
 # echo "BOOT_MONGODB_HOST: $4"
 BOOT_MONGODB_HOST=$5
 BOOT_MONGODB_PORT=8084
-BOOT_MONGODB_PRIVATE=$10
+BOOT_MONGODB_PRIVATE=${10}
 
 #logging settings
 echo $dateTime | tee -a script.log 
@@ -85,7 +85,7 @@ wait
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - running master core" | tee -a script.log 
 ssh -i "master-thesis.pem" ec2-user@$MASTER_HOST <<-ENDSSH
 cd master-thesis
-sudo WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_PRIVATE BOOT_MYSQL_HOST=$BOOT_MYSQL_PRIVATE WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_PRIVATE docker-compose up -d master prometheus
+sudo BOOT_MONGODB_HOST=$BOOT_MONGODB_PRIVATE WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_PRIVATE BOOT_MYSQL_HOST=$BOOT_MYSQL_PRIVATE WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_PRIVATE docker-compose up -d master prometheus
 ENDSSH
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - master core is running" | tee -a script.log 
 ) &
@@ -135,7 +135,7 @@ wait
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - running master jmeter" | tee -a script.log 
 ssh -i "master-thesis.pem" ec2-user@$MASTER_HOST <<-ENDSSH
 cd master-thesis
-sudo WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_PRIVATE BOOT_MYSQL_HOST=$BOOT_MYSQL_PRIVATE WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_PRIVATE docker-compose up jmeter
+sudo BOOT_MONGODB_HOST=$BOOT_MONGODB_PRIVATE WEBFLUX_MONGODB_HOST=$WEBFLUX_MONGODB_PRIVATE BOOT_MYSQL_HOST=$BOOT_MYSQL_PRIVATE WEBFLUX_MYSQL_HOST=$WEBFLUX_MYSQL_PRIVATE docker-compose up jmeter
 ENDSSH
 
 echo "$(date +'%Y-%m-%d-%H:%M:%S') - testing finished" | tee -a script.log 
