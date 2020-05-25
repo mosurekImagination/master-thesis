@@ -23,21 +23,21 @@ mkdir $THIRD_WORKER_RESULTS
 mkdir $FOURTH_WORKER_RESULTS
 
 # # (
-# echo "### $dateTime STARTING 1 LOAD TESTING OF $FIRST_WORKER_HOST:$FIRST_WORKER_PORT ###"
-# JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$FIRST_WORKER_HOST -Jhostport=$FIRST_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $FIRST_WORKER_RESULTS/results.log -e -o $FIRST_WORKER_RESULTS/report/ -JperfmonReportPath=$FIRST_WORKER_RESULTS -JaggregateReportPath=$FIRST_WORKER_RESULTS -JsummaryReportPath=$FIRST_WORKER_RESULTS -JgraphReportPath=$FIRST_WORKER_RESULTS -JtableReportPath=$FIRST_WORKER_RESULTS
-# echo "### $dateTime FINISHED 1 LOAD TESTING OF $FIRST_WORKER_HOST:$FIRST_WORKER_PORT ###"
+echo "### $dateTime STARTING 1 LOAD TESTING OF $FIRST_WORKER_HOST:$FIRST_WORKER_PORT ###"
+JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$FIRST_WORKER_HOST -Jhostport=$FIRST_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $FIRST_WORKER_RESULTS/results.log -e -o $FIRST_WORKER_RESULTS/report/ -JperfmonReportPath=$FIRST_WORKER_RESULTS -JaggregateReportPath=$FIRST_WORKER_RESULTS -JsummaryReportPath=$FIRST_WORKER_RESULTS -JgraphReportPath=$FIRST_WORKER_RESULTS -JtableReportPath=$FIRST_WORKER_RESULTS
+echo "### $dateTime FINISHED 1 LOAD TESTING OF $FIRST_WORKER_HOST:$FIRST_WORKER_PORT ###"
 # # )&
 
 # # # (
-# echo "### STARTING 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
-# JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $SECOND_WORKER_RESULTS/results.log -e -o $SECOND_WORKER_RESULTS/report/ -JperfmonReportPath=$SECOND_WORKER_RESULTS -JaggregateReportPath=$SECOND_WORKER_RESULTS -JsummaryReportPath=$SECOND_WORKER_RESULTS -JgraphReportPath=$SECOND_WORKER_RESULTS -JtableReportPath=$SECOND_WORKER_RESULTS
-# echo "### FINISHED 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
+echo "### STARTING 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
+JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$SECOND_WORKER_HOST -Jhostport=$SECOND_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $SECOND_WORKER_RESULTS/results.log -e -o $SECOND_WORKER_RESULTS/report/ -JperfmonReportPath=$SECOND_WORKER_RESULTS -JaggregateReportPath=$SECOND_WORKER_RESULTS -JsummaryReportPath=$SECOND_WORKER_RESULTS -JgraphReportPath=$SECOND_WORKER_RESULTS -JtableReportPath=$SECOND_WORKER_RESULTS
+echo "### FINISHED 2 LOAD TESTING OF $SECOND_WORKER_HOST:$SECOND_WORKER_PORT###"
 # # # )&
 
 # # # (
-# echo "### STARTING 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
-# JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $THIRD_WORKER_RESULTS/results.log -e -o $THIRD_WORKER_RESULTS/report/ -JperfmonReportPath=$THIRD_WORKER_RESULTS -JaggregateReportPath=$THIRD_WORKER_RESULTS -JsummaryReportPath=$THIRD_WORKER_RESULTS -JgraphReportPath=$THIRD_WORKER_RESULTS -JtableReportPath=$THIRD_WORKER_RESULTS
-# echo "### FINISHED 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
+echo "### STARTING 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
+JVM_ARGS="-Xms1024m -Xmx2048m" ./bin/jmeter.sh -Jjmeter.reportgenerator.overall_granularity=2000 -Jhostadress=$THIRD_WORKER_HOST -Jhostport=$THIRD_WORKER_PORT  -n -t ./test-scenarios/simple.jmx -l $THIRD_WORKER_RESULTS/results.log -e -o $THIRD_WORKER_RESULTS/report/ -JperfmonReportPath=$THIRD_WORKER_RESULTS -JaggregateReportPath=$THIRD_WORKER_RESULTS -JsummaryReportPath=$THIRD_WORKER_RESULTS -JgraphReportPath=$THIRD_WORKER_RESULTS -JtableReportPath=$THIRD_WORKER_RESULTS
+echo "### FINISHED 3 LOAD TESTING OF $THIRD_WORKER_HOST:$THIRD_WORKER_PORT###"
 # # ) &
 
 # # (
